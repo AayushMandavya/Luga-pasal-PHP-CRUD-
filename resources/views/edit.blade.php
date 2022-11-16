@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<body>
+<h2 class="text-center">
+     OutDoor Luga Pasal
+    </h2>
+    
+    
+    <form action="/edit/{{$item->$id}}" method="post" class="form-control p-3 text-center">
+        @csrf
+        <label>Bh Number</label>
+        <input type="text" name="BhNo" class="form-control">
+        <label>Bh Quantity</label>
+        <input type="text" name="quantity" class="form-control">
+        <label>Bh Status</label>
+        <input type="text" name="status" class="form-control">
+        <label>Bh Remarks</label>
+        <input type="text" name="remarks" class="form-control">
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+    
+</body>
+</html>
