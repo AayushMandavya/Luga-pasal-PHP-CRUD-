@@ -14,16 +14,16 @@
     </h2>
     
     
-    <form action="/edit/{{$item->$id}}" method="post" class="form-control p-3 text-center">
+    <form action="/edit/{{$item->id}}" method="post" class="form-control p-3 text-center">
         @csrf
         <label>Bh Number</label>
-        <input type="text" name="BhNo" class="form-control">
+        <input type="text" name="BhNo" value="{{$item->bhno}}" class="form-control">
         <label>Bh Quantity</label>
-        <input type="text" name="quantity" class="form-control">
+        <input type="text" name="quantity" value="{{$item->quantity}}" class="form-control">
         <label>Bh Status</label>
-        <input type="text" name="status" class="form-control">
+        <input type="text" name="status" value="{{$item->status}}" class="form-control">
         <label>Bh Remarks</label>
-        <input type="text" name="remarks" class="form-control">
+        <input type="text" name="remarks" value="{{$item->remarks}}" class="form-control">
         <button type="submit" class="btn btn-success">Update</button>
     </form>
     

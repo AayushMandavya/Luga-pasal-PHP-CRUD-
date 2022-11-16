@@ -61,10 +61,10 @@ class pasalController extends Controller
      * @param  \App\Models\lugapasal  $lugapasal
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editItem($id)
     {
         $item = lugapasal::find($id);
-        return view("edit",['items'=>$item]);
+        return view("edit",['item'=>$item]);
     }
 
     /**

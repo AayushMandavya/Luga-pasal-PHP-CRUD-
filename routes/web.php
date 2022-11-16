@@ -21,5 +21,5 @@ Route::get('/', function () {
 Route::get('/',[pasalController::class,'index']); 
 Route::post('/create', [pasalController::class,'create'])->name('create');
 Route::get('/destroy/{id}', [pasalController::class, 'destroy']);
-Route::get('/edit/{id}', [pasalController::class, "edit"]);
+Route::get('/edit/{id}', [pasalController::class, "editItem"]);
 Route::post('/edit/{id}', [pasalController::class,'update']);
