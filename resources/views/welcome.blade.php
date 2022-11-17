@@ -13,8 +13,9 @@
      OutDoor Luga Pasal
     </h2>
     
-    
-    <form action="{{route('create')}}" method="post" class="form-control p-3 text-center">
+    <div class="container d-flex justify-content-center">
+
+    <form action="{{route('create')}}" method="post" style="width:50%" class="form-control p-3 text-center border border-info">
         @csrf
         <label>Bh Number</label>
         <input type="text" name="BhNo" class="form-control">
@@ -23,9 +24,11 @@
         <label>Bh Status</label>
         <input type="text" name="status" class="form-control">
         <label>Bh Remarks</label>
-        <input type="text" name="remarks" class="form-control">
+        <textarea name="remarks" id="" placeholder="Write Remarks Here" cols="80" rows="10"></textarea>
+        <!-- <input type="text" name="remarks" class="form-control"> -->
         <button type="submit" class="btn btn-success">Add</button>
     </form>
+</div>
     <table class="table table-hover w-75 mx-auto my-3">
         <thead>
             <tr class="table-primary">
